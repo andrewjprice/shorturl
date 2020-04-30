@@ -1,5 +1,11 @@
+const path = require('path');
+
 const index = (req, res) => {
-    res.send('Not implemented: Index Page');
+    res.sendFile(path.join(__dirname + '/index.html'));
 }
 
-module.exports = { index };
+const url = (req, res) => {
+    res.send(req.body);
+}
+
+module.exports = { index, url };
