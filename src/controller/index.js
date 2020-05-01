@@ -5,7 +5,7 @@ const index = (req, res) => {
 }
 
 const url = (req, res) => {
-    res.send(req.body);
+    res.send(req.body.url);
 }
 
 module.exports = { index, url };
