@@ -1,7 +1,6 @@
-const path = require('path');
 
 const index = (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile('./index.html', { root: 'public' });
 }
 
 const url = (req, res) => {
