@@ -1,6 +1,6 @@
 const express = require('express');
+const models = require('./models/url');
 const routes = require('./routes/index');
-const path = require('path');
 
 const app = express();
 app.use(express.static('public'))

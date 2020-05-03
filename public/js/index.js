@@ -6,10 +6,10 @@ $(document).ready(function() {
 
       $.ajax({
         type: 'POST',
-        url: '/url',
+        url: '/shorten',
         data: data,
       }).done(function(data) {
-        $('#result').text(data);
+        $('#result').text(data['hash']);
       }).fail(function(xhr, textStatus, errorThrown) {
         console.log(errorThrown);
       });

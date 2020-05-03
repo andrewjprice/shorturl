@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controller/index');
+const url = require('../controller/url/index');
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-router.get('/', controller.index);
-router.post('/url', urlencodedParser, controller.url);
+router.get('/', url.index);
+router.post('/shorten', urlencodedParser, url.shorten);
 
 module.exports = router;
