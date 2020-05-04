@@ -1,6 +1,7 @@
 const { wrap: async } = require('co');
 const mongoose = require('mongoose');
 const btoa = require('btoa');
+const atob = require('atob');
 const Url = mongoose.model('Url');
 
 exports.index = async((req, res) => {
@@ -31,3 +32,15 @@ exports.shorten = async((req, res) => {
         }
     })
 });
+
+exports.hash = function(req, res) {
+    const id = atob(req.params.hash);
+    Url.findOne({ _id: id }, function(err, record) {
+        if (record) {
+            console.log('url: ' + record.url);
+            res.status(301).redirect(record.url);
+        } else {
+            res.redirect('/');
+        }
+    });
+}

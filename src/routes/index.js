@@ -6,5 +6,6 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 router.get('/', url.index);
 router.post('/shorten', urlencodedParser, url.shorten);
+router.get('/:hash', url.hash);
 
 module.exports = router;
