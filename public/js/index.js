@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    console.log('js/index.js loaded');
     $('#urlForm').submit(function(event) {
       event.preventDefault();
 

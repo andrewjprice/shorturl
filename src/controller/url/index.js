@@ -5,7 +5,7 @@ const atob = require('atob');
 const Url = mongoose.model('Url');
 
 exports.index = async((req, res) => {
-    res.sendFile('./index.html', { root: 'public' });
+    res.render('index.pug');
 });
 
 exports.shorten = async((req, res) => {
