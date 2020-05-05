@@ -10,7 +10,7 @@ $(document).ready(function() {
         url: '/shorten',
         data: data,
       }).done(function(data) {
-        $('#result').text(data['hash']);
+        $('#result').text(window.location.origin + '/' + data['hash']);
       }).fail(function(xhr, textStatus, errorThrown) {
         console.log(errorThrown);
       });
