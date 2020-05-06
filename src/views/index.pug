@@ -3,11 +3,11 @@ html
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         title= "URL Shortener"
-        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css")
+        link(rel="stylesheet" type="text/css" href="./../../public/css/mystyles.css")
         script(src="https://code.jquery.com/jquery-3.5.1.min.js")
         script(type="text/javascript" src="./../../public/js/index.js")
     body
-        .section.hero.is-info
+        .section.hero.is-primary
             .div.hero-body
                 .container
                     h1.title URL Shortener
@@ -19,6 +19,7 @@ html
                         div.field.is-grouped
                             p.control.is-expanded
                                 input(type="text" name="url" placeholder="Enter a long url").has-text-centered.input
-                            button.button.is-info Shorten
-                div.columns.is-centered
-                    span(id="result").is-medium
+                            button.button.is-primary Shorten
+                div.box
+                    div.field.is-grouped.columns.is-centered
+                        span(id="result").is-medium

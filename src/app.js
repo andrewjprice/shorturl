@@ -5,6 +5,7 @@ const routes = require('./routes/index');
 
 const app = express();
 app.use('*/js', express.static('public/js'));
+app.use('*/css', express.static('public/css'));
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 app.use(routes);
