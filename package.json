@@ -5,10 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js -e js,scss,pug",
+    "start": "node server.js",
+    "nodemon": "nodemon server.js -e js,scss,pug",
     "css-build": "node-sass --omit-source-map-url ./public/sass/mystyles.scss ./public/css/mystyles.css",
     "css-watch": "npm run css-build -- --watch",
-    "start-dev": "npm run css-watch & npm start"
+    "start-dev": "npm run css-watch & npm run nodemon"
   },
   "author": "Andrew Price",
   "license": "ISC",
