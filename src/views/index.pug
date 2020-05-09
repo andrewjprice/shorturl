@@ -8,12 +8,10 @@ html
         script(src="https://code.jquery.com/jquery-3.5.1.min.js")
         script(type="text/javascript" src="./../../public/js/index.js")
     body
-        .section
-            .hero.is-primary
-                .hero-body
-                    .container
-                        h1.title URL Shortener
-                        h2.subtitle Generates a short url
+        .hero.is-primary
+            .hero-body
+                .container
+                    h1.title URL Shortener
         .section
             .container
                 div.box
@@ -24,8 +22,9 @@ html
                             button.button.is-primary Shorten
                         div(class="newUrl").hide
                             div.box.has-background-link
-                                div.columns.is-centered
-                                    div.column.is-3
+                                div.columns.is-centered.is-mobile
+                                    div
                                         span(id="result").is-medium.has-text-white
-                                    div.column.is-1
+                                    div.pl-1
                                         span(class="copy").tag.pointer Copy
+

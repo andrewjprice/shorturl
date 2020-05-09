@@ -1,9 +1,10 @@
 @charset "utf-8";
-
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
 $family-sans-serif: "Nunito", sans-serif;
 $purple: #3c1f41;
 $navy: #000080;
 $primary: $purple;
 $link: $navy;
+
 @import "../../node_modules/bulma/bulma.sass";
