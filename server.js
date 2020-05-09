@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const app = require('./src/app');
 const port = process.env.PORT || 3000;
+const URI = process.env.DATABASE_URI || 'mongodb://localhost/test';
 
 function listen() {
     app.listen(port);
@@ -14,7 +15,7 @@ function connect() {
         .on('error', console.log)
         .on('disconnected', connect)
         .once('open', listen);
-    return mongoose.connect('mongodb://localhost/test', {
+    return mongoose.connect(URI, {
         keepAlive: 1,
         useNewUrlParser: true,
         useUnifiedTopology: true
